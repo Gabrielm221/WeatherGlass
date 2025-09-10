@@ -1,11 +1,7 @@
-import { resolve } from 'path';
-import rootConfig from '../jest.config.js'; // importa o config raiz
-
-const root = resolve();
+import rootConfig from '../jest.config.js'; // config raiz
 
 export default {
   ...rootConfig,
-  
   preset: 'ts-jest/presets/default-esm',
   testEnvironment: 'node',
   transform: {
@@ -14,10 +10,6 @@ export default {
   extensionsToTreatAsEsm: ['.ts'],
   moduleFileExtensions: ['ts', 'js', 'json', 'node'],
   setupFilesAfterEnv: ['<rootDir>/test/jest-setup.ts'],
-
-  rootDir: root,
   displayName: 'end2end-tests',
-  setupFilesAfterEnv: ['<rootDir>/test/jest-setup.ts'],
   testMatch: ['<rootDir>/test/**/*.test.ts'],
 };
-

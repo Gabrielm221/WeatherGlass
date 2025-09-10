@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "lib": ["ES2022"],
-    "sourceMap": true,
+      "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "Node",
     "outDir": "dist",
     "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": ["ES2022"],
+    "sourceMap": true,
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node", "jest"],
     "isolatedModules": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -16,8 +22,7 @@
     "alwaysStrict": true,
     "removeComments": true,
     "noImplicitReturns": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+
     "allowJs": true,
     "checkJs": false,
     "baseUrl": ".",
@@ -29,8 +34,6 @@
       "./src",
       "./test"
     ],
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
   },
   "include": [
     "./src/**/*.ts",
